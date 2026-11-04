@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>Patient Dashboard - The Diet Secrets</title><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#406840", "error": "#ba1a1a", "tertiary-container": "#6d3412", "outline": "#727974", "on-error": "#ffffff", "inverse-primary": "#adcebe", "on-tertiary-container": "#ef9e73", "on-surface-variant": "#424844", "surface-container": "#e7eeff", "tertiary-fixed-dim": "#ffb691", "on-tertiary-fixed-variant": "#713714", "surface-container-highest": "#d8e3fb", "inverse-surface": "#263143", "on-tertiary": "#ffffff", "tertiary": "#511f00", "primary-container": "#2d4a3e", "on-primary-fixed-variant": "#304d40", "surface-dim": "#cfdaf2", "on-error-container": "#93000a", "surface-bright": "#f9f9ff", "on-secondary-fixed-variant": "#284f2a", "on-secondary-fixed": "#002106", "outline-variant": "#c1c8c3", "tertiary-fixed": "#ffdbcb", "surface-tint": "#476558", "error-container": "#ffdad6", "on-primary-container": "#99b9a9", "on-primary": "#ffffff", "surface-variant": "#d8e3fb", "on-secondary-container": "#446c44", "on-secondary": "#ffffff", "background": "#f9f9ff", "secondary-fixed": "#c1eebc", "surface-container-low": "#f0f3ff", "surface-container-high": "#dee8ff", "on-background": "#111c2d", "on-surface": "#111c2d", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#a5d2a2", "inverse-on-surface": "#ecf1ff", "primary-fixed": "#c9ead9", "on-tertiary-fixed": "#341100", "primary-fixed-dim": "#adcebe", "on-primary-fixed": "#022016", "surface": "#f9f9ff", "secondary-container": "#beecb9", "primary": "#163328" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem" }, "fontFamily": { "label-sm": [ "Inter" ], "display-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "body-lg": [ "Inter" ], "display-lg-mobile": [ "Plus Jakarta Sans" ], "body-xl": [ "Inter" ], "label-md": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "caption": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-xl": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "caption": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[1px_0_12px_rgba(45,74,62,0.04)]"><div class="flex flex-col"><div class="px-space-lg mb-space-lg flex items-center gap-space-sm"><img alt="The Diet Secrets Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6SjCRfZDdlKRTDpDsZJi54633yLx2Y4mzJB9H9PKRR_10EtX34Ble-OfLTJYOCfAskWihKdqW2YLEtTgOm1ywv7q3F7oECdnVuXDqi4_kOjiWKIgSZ9awtbWUheiJO9D8ZbFVsAEMgva6MXxND-7iUoT_nxww_f8QutlvARyvwgcJCX4cXkQYl6xDv5GHj5rJhFZvVaJWJAl6aZOOqWwhCGsFi00xrnmOtPq3sg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-tight">THE DIET SECRETS</span><span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">PATIENT PORTAL</span></div></div><nav class="space-y-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="calorie-tracker-and-dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span><span class="font-label-lg text-label-lg">Overview &amp; Tracking</span></a><a class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="diet-plans" href="#"><span class="material-symbols-outlined text-lg">restaurant_menu</span><span class="font-label-lg text-label-lg">My Diet Sheet</span></a><a class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dietitian-booking" href="#"><span class="material-symbols-outlined text-lg">calendar_month</span><span class="font-label-lg text-label-lg">Dietitian Visits</span></a><a class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bmi-and-health-tools" href="#"><span class="material-symbols-outlined text-lg">vital_signs</span><span class="font-label-lg text-label-lg">Vitals &amp; Biometrics</span></a><a class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="healthy-recipes" href="#"><span class="material-symbols-outlined text-lg">menu_book</span><span class="font-label-lg text-label-lg">Prescribed Recipes</span></a><a class="flex items-center gap-space-sm px-4 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-lg">travel_explore</span><span class="font-label-lg text-label-lg">Public Site</span></a></nav></div><div class="px-space-md space-y-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-high flex items-center gap-space-sm"><img alt="Profile" class="w-9 h-9 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfD_M4cBF-72fHDnElyhWTQZ4HjcgRgKJjEhbBhfdMsMk3UQhzdaMYozGZd9ck5N7IfEThXdJntur_9eI7gFotUztYaUDOT9z5DAdCVyOWnU0NeoABL2pjbvzerGqIrTv2b468jOGA0vcTlqGeQvnKqbv5K68VAjqCNPlRahM5evRIz8NzzodnkMNJwhtk50alD_C40rspbD32RBQl85tPtveGX3-Mr8OW150q8g"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Clinical Care Client</span><span class="font-caption text-caption text-secondary">Plan: Metabolic Shield</span></div></div><div class="px-space-sm flex items-center justify-between text-on-surface-variant font-caption text-caption"><span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span> IDA Verified</span><a class="hover:text-on-surface" data-path="about-us" href="#">Help &amp; FAQ</a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(45,74,62,0.04)]"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Session</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-primary font-semibold">Metabolic Health Panel</span></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md bg-primary-container text-on-primary px-4 py-2 rounded-full hover:bg-primary transition-all" data-path="dietitian-booking" href="#">Quick Consult</a><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfD_M4cBF-72fHDnElyhWTQZ4HjcgRgKJjEhbBhfdMsMk3UQhzdaMYozGZd9ck5N7IfEThXdJntur_9eI7gFotUztYaUDOT9z5DAdCVyOWnU0NeoABL2pjbvzerGqIrTv2b468jOGA0vcTlqGeQvnKqbv5K68VAjqCNPlRahM5evRIz8NzzodnkMNJwhtk50alD_C40rspbD32RBQl85tPtveGX3-Mr8OW150q8g"/></div></div></header><main class="relative pt-16 bg-surface w-full px-space-lg py-space-md min-h-screen"><div class="flex flex-col w-full">
+<div class="space-y-space-lg max-w-[1440px] mx-auto w-full pb-12">
+<!-- TOP OVERVIEW BANNER: Personalized Welcome & Urgent Consultation Telehealth Pill -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute right-40 -bottom-20 w-64 h-64 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              DAY 24 OF 84 • METABOLIC RESET
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">IDA Registered Protocol</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+            Good afternoon, Priyanshu!
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Your glycemic stabilization index is up <strong class="text-secondary font-semibold">14%</strong> this week. Today’s caloric burn aligns precisely with your phase-2 lean preservation window.
+          </p>
+</div>
+<!-- Consultation Pill Notice -->
+<div class="w-full xl:w-auto bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">video_camera_front</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">Tomorrow • 11:30 AM IST</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dr. Anjali Sharma, RD</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Metabolic Biometrics Review &amp; Week 4 Tweaks</p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shrink-0 shadow-sm" href="#">
+<span class="material-symbols-outlined text-base">videocam</span>
+            Zoom Link Ready
+          </a>
+</div>
+</div>
+<!-- Quick Action Floating Bar -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center gap-space-sm bg-surface-container-lowest/80 backdrop-blur-sm p-space-sm rounded-xl">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium hover:bg-primary-container transition-all shadow-sm" onclick="document.getElementById('food-search-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-base">add_circle</span>
+          Log Meal
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-medium transition-colors" onclick="logWaterQuick()">
+<span class="material-symbols-outlined text-base">water_drop</span>
+          Record Water (+250ml)
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-medium transition-colors" onclick="alert('Quick Log Vitals opened. Log fasting glucose &amp; blood pressure.')">
+<span class="material-symbols-outlined text-base">favorite</span>
+          Log Vitals
+        </button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-colors ml-auto" onclick="alert('Preparing verified clinical weekly summary PDF...')">
+<span class="material-symbols-outlined text-base">description</span>
+          Weekly Lab Report
+        </button>
+</div>
+</div>
+<!-- MAIN METRIC GRID: Hero Analytics + Hydration/Vitals Widget -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- HERO ANALYTICS (8 cols): Macro Rings & Calorie Burn -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-widest">NUTRITIONAL EQUILIBRIUM</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Daily Calorie &amp; Macro Distribution</h2>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Target: 1,850 kcal/day
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center my-space-sm">
+<!-- Circular Progress Gauge with SVG -->
+<div class="md:col-span-5 flex flex-col items-center justify-center relative">
+<div class="relative w-56 h-56 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160">
+<!-- Track -->
+<circle class="text-surface-container" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-width="14"></circle>
+<!-- Progress (1420 / 1850 = 76.7%) Circumference = 2 * PI * 68 ≈ 427.25. Dash offset = 427.25 * (1 - 0.767) ≈ 99.5 -->
+<circle class="text-secondary transition-all duration-1000 ease-out" cx="80" cy="80" fill="none" id="calorie-ring-circle" r="68" stroke="currentColor" stroke-dasharray="427.25" stroke-dashoffset="99.5" stroke-linecap="round" stroke-width="14"></circle>
+</svg>
+<!-- Center Readout -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-caption text-caption text-outline font-semibold uppercase tracking-wider">CONSUMED</span>
+<span class="font-display-lg text-display-lg text-primary font-bold leading-none my-1" id="cal-consumed-val">1,420</span>
+<span class="font-label-md text-label-md text-on-surface-variant">of 1,850 kcal</span>
+<span class="mt-2 inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">
+<span class="material-symbols-outlined text-xs">check</span> 430 kcal left
+                </span>
+</div>
+</div>
+<p class="font-caption text-caption text-on-surface-variant text-center mt-3">
+              Calibrated for 45% Carbs • 24% Protein • 24% Fats • 7% Fibre
+            </p>
+</div>
+<!-- Detailed Macronutrient Breakdown Bars -->
+<div class="md:col-span-7 space-y-space-md">
+<!-- Protein -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-lg text-label-lg font-semibold text-primary">Protein</span>
+<span class="font-caption text-caption text-secondary font-semibold">(Tissue Synthesis)</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+<span>84g</span> <span class="text-outline font-normal">/ 110g (76%)</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-700" style="width: 76%;"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>Optimal window for PCOS recovery</span>
+<span class="font-semibold text-primary">26g needed at Dinner</span>
+</div>
+</div>
+<!-- Complex Carbs -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-lg text-label-lg font-semibold text-primary">Complex Carbs</span>
+<span class="font-caption text-caption text-tertiary font-semibold">(Low GI Millets &amp; Grains)</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+<span>145g</span> <span class="text-outline font-normal">/ 200g (72%)</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full transition-all duration-700" style="width: 72%;"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>Slow glycemic release sustained</span>
+<span class="font-semibold text-tertiary">55g remaining</span>
+</div>
+</div>
+<!-- Healthy Fats -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-lg text-label-lg font-semibold text-primary">Healthy Fats</span>
+<span class="font-caption text-caption text-on-surface-variant">(Nuts, Seeds &amp; Desi Ghee)</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+<span>38g</span> <span class="text-outline font-normal">/ 50g (76%)</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full transition-all duration-700" style="width: 76%;"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>Hormonal support active</span>
+<span class="font-semibold text-primary">12g remaining</span>
+</div>
+</div>
+<!-- Dietary Fibre -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-lg text-label-lg font-semibold text-primary">Dietary Fibre</span>
+<span class="font-caption text-caption text-secondary font-semibold">(Gut Flora Support)</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+<span>28g</span> <span class="text-outline font-normal">/ 32g (87%)</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-700" style="width: 87%;"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>94% daily microbiome benchmark</span>
+<span class="font-semibold text-secondary">4g to optimal goal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- HYDRATION & VITALS WIDGET (4 cols) -->
+<div class="lg:col-span-4 space-y-space-md flex flex-col justify-between">
+<!-- Hydration Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">water_drop</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Hydration Tracker</h3>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-secondary px-2.5 py-0.5 rounded-full bg-secondary-fixed">
+              80% TARGET
+            </span>
+</div>
+<div class="flex items-baseline justify-between mb-3">
+<div>
+<span class="font-headline-xl text-headline-xl text-primary font-bold" id="water-intake-readout">2,400</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium"> / 3,000 ml</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Goal: 12 glasses</span>
+</div>
+<!-- Interactive Glasses Grid -->
+<div class="grid grid-cols-6 gap-2 my-space-md p-space-sm bg-surface-container-low rounded-xl" id="glasses-grid">
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 1: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">250</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 2: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">500</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 3: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">750</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 4: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">1.0L</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 5: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">1.25L</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 6: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">1.5L</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 7: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">1.75L</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 8: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">2.0L</span>
+</button>
+<button class="h-11 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center transition-all hover:scale-105 shadow-sm" onclick="toggleGlass(this)" title="Glass 9: 250ml (Logged)">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">2.25L</span>
+</button>
+<button class="h-11 rounded-lg bg-surface-container text-outline flex flex-col items-center justify-center transition-all hover:bg-secondary-fixed hover:text-primary" onclick="toggleGlass(this)" title="Glass 10: Click to log">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">2.5L</span>
+</button>
+<button class="h-11 rounded-lg bg-surface-container text-outline flex flex-col items-center justify-center transition-all hover:bg-secondary-fixed hover:text-primary" onclick="toggleGlass(this)" title="Glass 11: Click to log">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">2.75L</span>
+</button>
+<button class="h-11 rounded-lg bg-surface-container text-outline flex flex-col items-center justify-center transition-all hover:bg-secondary-fixed hover:text-primary" onclick="toggleGlass(this)" title="Glass 12: Click to log">
+<span class="material-symbols-outlined text-lg">local_drink</span>
+<span class="font-caption text-[9px] font-bold">3.0L</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant">Tap glass to mark taken</span>
+<button class="font-label-sm text-label-sm font-semibold text-secondary hover:underline flex items-center gap-1" onclick="logWaterQuick()">
+<span class="material-symbols-outlined text-sm">add</span> +250 ml Quick Add
+            </button>
+</div>
+</div>
+<!-- Biometrics & Restorative Sleep -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Sleep -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-base">bedtime</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Sleep Quality</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">7h 20m</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-caption text-secondary font-medium">Deep / Restorative</span>
+</div>
+</div>
+<!-- Steps -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-base">directions_walk</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Daily Movement</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">8,420</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 84.2%;"></div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant block">84% of 10,000 steps</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DAILY MEAL LOGS (INDIAN DIET DATABASE INTEGRATION) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">CLINICAL DIET SHEET</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Today’s Prescribed Meal Logs</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All items authenticated with verified Indian Food Composition Tables (IFCT 2017)</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-semibold hover:bg-secondary-container transition-colors" onclick="document.getElementById('food-search-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-base">search</span>
+            Search Indian Database
+          </button>
+</div>
+</div>
+<!-- Meal Accordions -->
+<div class="space-y-space-md">
+<!-- BREAKFAST (Logged) -->
+<div class="bg-surface-container-low rounded-xl p-space-md transition-all">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">wb_twilight</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Breakfast</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-caption text-[10px] font-semibold">LOGGED • 08:45 AM</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Recommended Window: 08:00 - 09:30 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">320 kcal</span>
+<span class="block font-caption text-caption text-on-surface-variant">18g Protein • 34g Carbs</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">check</span>
+</button>
+</div>
+</div>
+<!-- Food items breakdown -->
+<div class="mt-space-sm pt-space-sm grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Golden crisp Indian besan chilla chickpea savory pancake garnished with finely chopped mint and coriander leaves served on clinical ceramic tableware in clean daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKQWpsBo8dR6fjoZeVRI4CadAk5MJ_5jKqAnuNDyLI7e7Xcxfu4yIOFs-Bmt4CP-dL_-_2k9qvG0uAWRcy_WVBJjYnm5AndgkgjN6-RSsPS7g9axaPJDwnkXdK1Ks8tBgpyThQpfG1jHHRrgQeS8raLgnMzFChCa5jy90xkv_k9znzq5Jl-Dm0SkkTYFjHXGGvUgc_h-NcPIkZ6noVQMHEerl0aBR_FMRTg9ouYg"/>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">2 Besan Chillas</p>
+<p class="font-caption text-caption text-on-surface-variant">With fresh mint-coriander chutney</p>
+<span class="font-caption text-caption text-secondary font-semibold">220 kcal • 11g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">egg</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">1 Whole Boiled Egg</p>
+<p class="font-caption text-caption text-on-surface-variant">Sprinkled with rock salt &amp; black pepper</p>
+<span class="font-caption text-caption text-secondary font-semibold">78 kcal • 6.5g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">local_cafe</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">Masala Green Tea</p>
+<p class="font-caption text-caption text-on-surface-variant">Cardamom, ginger infusion (No sugar)</p>
+<span class="font-caption text-caption text-secondary font-semibold">22 kcal • 0.5g P</span>
+</div>
+</div>
+</div>
+</div>
+<!-- LUNCH (Logged) -->
+<div class="bg-surface-container-low rounded-xl p-space-md transition-all">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">light_mode</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Lunch</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-caption text-[10px] font-semibold">LOGGED • 01:20 PM</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Recommended Window: 01:00 - 02:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">540 kcal</span>
+<span class="block font-caption text-caption text-on-surface-variant">34g Protein • 58g Carbs</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">check</span>
+</button>
+</div>
+</div>
+<!-- Food items breakdown -->
+<div class="mt-space-sm pt-space-sm grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">flatware</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">2 Multigrain Phulkas</p>
+<p class="font-caption text-caption text-on-surface-variant">Wheat + Jowar + Ragi</p>
+<span class="font-caption text-caption text-secondary font-semibold">160 kcal • 6g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Traditional healthy Indian Palak Paneer bowl with fresh organic spinach purée and low fat cottage cheese cubes, softly illuminated clinical food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC1F86Ezub_zm9g5CPGCkxWqHXwhZXHoVlwTWybWeFqsOfIPJePZSZlbNJywwbRHUlr_YeMQiNorA55TTKYMhrVjM5Cp3a7rSZ8jzjeOrQNEUKRwGDaCSCHMOx0Lfun8DsOITqWd1LPjCBwCXQlJXetXAlviGxlMmNiN9AZM6FVIVXcqW3MArd9T6zDCrKeKMljCkNQsucgQN4uNCAd7KbWob_ZD-NugBNhaeDWw"/>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">Palak Paneer (150g)</p>
+<p class="font-caption text-caption text-on-surface-variant">Cow milk paneer in spinach</p>
+<span class="font-caption text-caption text-secondary font-semibold">190 kcal • 16g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-2xl">soup_kitchen</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">1 Cup Dal Tadka</p>
+<p class="font-caption text-caption text-on-surface-variant">Yellow Moong &amp; Toor</p>
+<span class="font-caption text-caption text-secondary font-semibold">150 kcal • 10g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">Cucumber Salad</p>
+<p class="font-caption text-caption text-on-surface-variant">Lemon dressing &amp; flax seeds</p>
+<span class="font-caption text-caption text-secondary font-semibold">40 kcal • 2g P</span>
+</div>
+</div>
+</div>
+</div>
+<!-- EVENING SNACK (Logged) -->
+<div class="bg-surface-container-low rounded-xl p-space-md transition-all">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">nature_people</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Evening Snack</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-caption text-[10px] font-semibold">LOGGED • 05:00 PM</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Pre-workout Sustenance</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">160 kcal</span>
+<span class="block font-caption text-caption text-on-surface-variant">6g Protein • 18g Carbs</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">check</span>
+</button>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">nutrition</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">Roasted Makhana (Foxnuts)</p>
+<p class="font-caption text-caption text-on-surface-variant">Dry roasted with 2 halves walnuts &amp; pink salt</p>
+<span class="font-caption text-caption text-secondary font-semibold">145 kcal • 5.5g P</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">coffee</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-primary truncate">Assam Black Tea</p>
+<p class="font-caption text-caption text-on-surface-variant">Brewed with ginger &amp; cardamom (Sugar-free)</p>
+<span class="font-caption text-caption text-secondary font-semibold">15 kcal • 0.5g P</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DINNER (Pending / Prescribed) -->
+<div class="bg-surface-container rounded-xl p-space-md transition-all">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">bedtime</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Dinner</span>
+<span class="px-2 py-0.5 rounded-full bg-outline-variant text-on-surface font-caption text-[10px] font-semibold">PLANNED • 08:15 PM</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Recommended: Minimum 2.5 hours prior to sleep</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">400 kcal (Est.)</span>
+<span class="block font-caption text-caption text-on-surface-variant">26g Protein • 35g Carbs</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-all shadow-sm" onclick="confirmMeal('Dinner')">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                Mark as Eaten
+              </button>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover shrink-0" data-alt="Nutritious comforting Indian vegetable oats khichdi bowl with steamed greens and fresh pro-biotic curd, clinical culinary composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC78LeSrkAjAcCYxUGGVPoKOa0TgvqqKc4XcUxPbh5GDhTvc1kWRcF4vaLOX2wvB_PDA4V1tCiJ0wgpdQdrsKcvJYWQpTgKO45NdG3ZAlwUce6L7S8ch2zlS8TAyaaSENV-CCyDSmRCWGwWYKWR5wiLbUap6AIGQNGnZyjiQH_cBvVh3fmfHr34cIx7jo4_NYUcN3Pj83fCZiqxwOqQHsKvXI-ClP6Ij0DYvfgcQ"/>
+<div>
+<p class="font-label-md text-label-md font-semibold text-primary">Prescribed: Oats Khichdi with Steamed Veggies &amp; Low-Fat Curd</p>
+<p class="font-caption text-caption text-on-surface-variant">Rolled oats, yellow moong, carrots, beans, 100g probiotic curd</p>
+</div>
+</div>
+<span class="hidden sm:inline-block font-label-sm text-label-sm px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">
+              Exact Target Match
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- WEEKLY NUTRITION & WEIGHT TRAJECTORY CHART (Visual Analytics) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Calorie & Protein Adherence Graph (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">COMPLIANCE METRICS</span>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">7-Day Caloric &amp; Protein Adherence</h3>
+</div>
+<div class="flex items-center gap-3 font-caption text-caption">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Target (1,850 kcal)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Protein Met (&gt;100g)</span>
+</div>
+</div>
+<!-- Inline SVG Bar/Area Chart (Compact, Under 2KB) -->
+<div class="w-full h-56 pt-2">
+<svg class="w-full h-full" fill="none" viewbox="0 0 500 200">
+<!-- Gridlines -->
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="490" y1="20" y2="20"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="490" y1="65" y2="65"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="3 3" x1="40" x2="490" y1="110" y2="110"></line>
+<line class="text-surface-container" stroke="currentColor" x1="40" x2="490" y1="155" y2="155"></line>
+<!-- Y-Axis labels -->
+<text class="fill-outline text-[10px] font-mono" x="5" y="24">2,000</text>
+<text class="fill-outline text-[10px] font-mono" x="5" y="69">1,850</text>
+<text class="fill-outline text-[10px] font-mono" x="5" y="114">1,500</text>
+<text class="fill-outline text-[10px] font-mono" x="5" y="159">1,000</text>
+<!-- Target Baseline (1,850 kcal) -->
+<line class="text-secondary" stroke="currentColor" stroke-dasharray="4 2" stroke-width="1.5" x1="40" x2="490" y1="65" y2="65"></line>
+<!-- Day 1: Mon (1820 kcal) -->
+<rect class="fill-surface-container-high" height="85" rx="4" width="28" x="65" y="70"></rect>
+<rect class="fill-secondary" height="65" rx="4" width="28" x="65" y="90"></rect>
+<!-- Day 2: Tue (1860 kcal) -->
+<rect class="fill-surface-container-high" height="92" rx="4" width="28" x="125" y="63"></rect>
+<rect class="fill-secondary" height="70" rx="4" width="28" x="125" y="85"></rect>
+<!-- Day 3: Wed (1790 kcal) -->
+<rect class="fill-surface-container-high" height="80" rx="4" width="28" x="185" y="75"></rect>
+<rect class="fill-secondary" height="63" rx="4" width="28" x="185" y="92"></rect>
+<!-- Day 4: Thu (1840 kcal) -->
+<rect class="fill-surface-container-high" height="88" rx="4" width="28" x="245" y="67"></rect>
+<rect class="fill-secondary" height="75" rx="4" width="28" x="245" y="80"></rect>
+<!-- Day 5: Fri (1910 kcal) -->
+<rect class="fill-tertiary-fixed-dim" height="100" rx="4" width="28" x="305" y="55"></rect>
+<rect class="fill-secondary" height="67" rx="4" width="28" x="305" y="88"></rect>
+<!-- Day 6: Sat (1830 kcal) -->
+<rect class="fill-surface-container-high" height="86" rx="4" width="28" x="365" y="69"></rect>
+<rect class="fill-secondary" height="73" rx="4" width="28" x="365" y="82"></rect>
+<!-- Day 7: Today (1420 kcal so far) -->
+<rect class="fill-primary-container" height="40" rx="4" width="28" x="425" y="115"></rect>
+<rect class="fill-secondary" height="27" rx="4" width="28" x="425" y="128"></rect>
+<!-- X-Axis Days -->
+<text class="fill-on-surface-variant text-[11px] font-medium" x="70" y="178">Mon</text>
+<text class="fill-on-surface-variant text-[11px] font-medium" x="130" y="178">Tue</text>
+<text class="fill-on-surface-variant text-[11px] font-medium" x="190" y="178">Wed</text>
+<text class="fill-on-surface-variant text-[11px] font-medium" x="250" y="178">Thu</text>
+<text class="fill-on-surface-variant text-[11px] font-medium" x="310" y="178">Fri</text>
+<text class="fill-on-surface-variant text-[11px] font-medium" x="370" y="178">Sat</text>
+<text class="fill-primary text-[11px] font-bold" x="423" y="178">Today</text>
+</svg>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between text-on-surface">
+<span class="font-caption text-caption flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+            Weekly Caloric Variance: <strong class="font-semibold">+1.2% (Within safe metabolic threshold)</strong>
+</span>
+<span class="font-caption text-caption font-semibold text-secondary">Adherence: 96.4%</span>
+</div>
+</div>
+<!-- 6-Week Weight & Composition Trajectory (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">METABOLIC BIOMETRICS</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed px-2 py-0.5 rounded-full">-4.2 kg Total</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">Weight Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clinical baseline recorded weekly on calibrated in-clinic scales</p>
+</div>
+<!-- Trajectory Sparkline Graphic with Markers -->
+<div class="relative py-2">
+<svg class="w-full h-36" fill="none" viewbox="0 0 320 120">
+<!-- Shaded Area -->
+<path class="fill-secondary/10" d="M 20 20 L 70 38 L 120 54 L 180 72 L 240 88 L 300 102 L 300 115 L 20 115 Z"></path>
+<!-- Line -->
+<path class="text-secondary" d="M 20 20 L 70 38 L 120 54 L 180 72 L 240 88 L 300 102" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Nodes -->
+<circle class="fill-primary" cx="20" cy="20" r="4"></circle>
+<circle class="fill-primary" cx="70" cy="38" r="4"></circle>
+<circle class="fill-primary" cx="120" cy="54" r="4"></circle>
+<circle class="fill-primary" cx="180" cy="72" r="4"></circle>
+<circle class="fill-primary" cx="240" cy="88" r="4"></circle>
+<circle class="fill-secondary" cx="300" cy="102" r="5"></circle>
+<!-- Node Texts -->
+<text class="fill-on-surface text-[10px] font-mono font-semibold" x="10" y="14">79.4kg</text>
+<text class="fill-outline text-[10px] font-mono" x="60" y="32">78.5</text>
+<text class="fill-outline text-[10px] font-mono" x="110" y="48">77.6</text>
+<text class="fill-outline text-[10px] font-mono" x="170" y="66">76.8</text>
+<text class="fill-outline text-[10px] font-mono" x="230" y="82">75.9</text>
+<text class="fill-secondary text-[10px] font-mono font-bold" x="270" y="98">75.2kg</text>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-caption text-caption text-on-surface-variant block uppercase">Initial Weight</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">79.4 kg</span>
+<span class="font-caption text-caption text-outline">Day 1 (May 4)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-secondary-container">
+<span class="font-caption text-caption text-on-secondary-fixed-variant block uppercase font-semibold">Current Vitals</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">75.2 kg</span>
+<span class="font-caption text-caption text-secondary font-semibold">BMI: 24.1 (Normalized)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ACTIVE DIET PLAN & DIETITIAN NOTES (CLINICAL EMPOWERMENT) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Enrolled Protocol Details (5 cols) -->
+<div class="md:col-span-5 bg-primary rounded-xl p-space-lg text-on-primary shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-primary-container text-on-primary font-semibold tracking-wider uppercase">
+              Prescription #TDS-8924
+            </span>
+<span class="material-symbols-outlined text-secondary-fixed text-xl">shield_with_heart</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-primary">
+            PCOS &amp; Metabolic Reset (12 Weeks)
+          </h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
+            Targeting insulin sensitivity restoration, cortisol rhythm leveling, and visceral lipid reduction using clean ancestral Indian wholesome grains and precision macro-timing.
+          </p>
+</div>
+<div class="mt-space-md pt-space-md border-none bg-primary-container/40 p-space-md rounded-xl space-y-2">
+<div class="flex justify-between font-label-sm text-label-sm text-primary-fixed">
+<span>Overall Program Milestone</span>
+<span>Week 4 of 12 (33%)</span>
+</div>
+<div class="w-full bg-primary-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 33%;"></div>
+</div>
+<span class="font-caption text-caption text-on-primary-container block">Next blood lipid profile check: Day 42 (2 weeks remaining)</span>
+</div>
+</div>
+<!-- Dietitian Anjali's Weekly Feedback (7 cols) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 ring-2 ring-secondary-fixed" data-alt="Close up portrait of Dr. Anjali Sharma, professional Indian Clinical Dietitian smiling in clinical white lab coat with stethoscope, warm empathetic hospital lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpi1v-z03wXBfAPQZEOuQFbparTMmyGFWKBFrWJYiBMKS1a_sMk6j9LKR4FJ3mQQCWY2g01Yd_anTfWkU6ToRfNR-7KvnezuriEwBj-daBPHfd1iCGATbhe3NjFiA1_4ve4Gcc_Ujb6U0kBCyYpq4JYi94AZYZyY99yspdJ9n0qAvYRm3KM4l8qXiPW2xY--samucZcTm-7l1Bk9xo4hjUCoGF9OaN-10B6pinyw"/>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-primary">Clinical Observation &amp; Feedback</p>
+<p class="font-caption text-caption text-on-surface-variant">Logged by Dr. Anjali Sharma, Chief Dietitian • Today 09:15 AM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">clinical_notes</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl text-on-surface space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">thumb_up</span>
+<p class="font-label-lg text-label-lg font-semibold text-primary">"Remarkable adherence on protein goals!"</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              “Priyanshu, your post-lunch glucose stabilization has visibly flattened on the logs. Great job maintaining protein through paneer and dal combination! On your morning strength days (Tuesday/Thursday), please bump water intake by an additional <strong>500ml</strong> before 2 PM to optimize renal filtration.”
+            </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">alarm</span>
+<span class="font-caption text-caption text-on-surface-variant">Next Clinical Checkpoint: Tomorrow, 11:30 AM IST</span>
+</div>
+<a class="font-label-sm text-label-sm font-semibold text-primary hover:text-secondary flex items-center gap-1" href="#">
+            Reply to Dietitian Notes <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE MODAL: Indian Food Database Quick Search Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden p-4" id="food-search-modal">
+<div class="bg-surface-container-lowest max-w-xl w-full rounded-2xl p-space-lg shadow-2xl space-y-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-caption text-caption text-secondary font-semibold uppercase tracking-wider">INDIAN NUTRITION COMPENDIUM</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-primary">Log Indian Food Item</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('food-search-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Search Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-3.5 text-outline text-xl">search</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl bg-surface-container-low text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/50" id="food-search-input" oninput="filterIndianFoods(this.value)" placeholder="Search Roti, Dal, Paneer, Dosa, Idli, Khichdi..." type="text"/>
+</div>
+<!-- Quick Chips -->
+<div class="flex flex-wrap gap-1.5">
+<span class="font-caption text-caption text-on-surface-variant self-center mr-1">Frequent:</span>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Roti (Whole Wheat)')">Roti</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Dal Tadka (Moong)')">Dal</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Paneer Bhurji')">Paneer</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Curd / Dahi')">Curd</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Brown Rice (Steamed)')">Brown Rice</button>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-secondary-fixed text-primary font-caption text-caption font-semibold" onclick="quickSelectFood('Moong Sprouts Chaat')">Sprouts</button>
+</div>
+<!-- Suggested Items List -->
+<div class="max-h-64 overflow-y-auto space-y-2 pr-1" id="food-results-list">
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary font-bold text-sm">
+              ROT
+            </div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-primary">Phulka / Roti (Wheat)</p>
+<p class="font-caption text-caption text-on-surface-variant">1 piece (35g) • 80 kcal • 3g Protein • 16g Carbs</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container" onclick="addFoodItem('Roti (1 piece)', 80, 3)">
+            + Add
+          </button>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold text-sm">
+              DAL
+            </div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-primary">Yellow Dal Tadka</p>
+<p class="font-caption text-caption text-on-surface-variant">1 katori (150g) • 150 kcal • 9g Protein • 21g Carbs</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container" onclick="addFoodItem('Dal Tadka (1 katori)', 150, 9)">
+            + Add
+          </button>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-sm">
+              PAN
+            </div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-primary">Paneer Bhurji (Low-fat)</p>
+<p class="font-caption text-caption text-on-surface-variant">100g serving • 180 kcal • 18g Protein • 4g Carbs</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container" onclick="addFoodItem('Paneer Bhurji (100g)', 180, 18)">
+            + Add
+          </button>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold text-sm">
+              DAH
+            </div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-primary">Homemade Cow Milk Curd (Dahi)</p>
+<p class="font-caption text-caption text-on-surface-variant">1 bowl (100g) • 60 kcal • 4g Protein • 5g Carbs</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container" onclick="addFoodItem('Curd (100g)', 60, 4)">
+            + Add
+          </button>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Verified by Indian Dietetic Association</span>
+<button class="font-label-sm text-label-sm text-outline hover:text-primary" onclick="document.getElementById('food-search-modal').classList.add('hidden')">Cancel</button>
+</div>
+</div>
+</div>
+<!-- SCRIPT FOR DYNAMIC DASHBOARD ACTIONS -->
+<script>
+    let currentWater = 2400;
+    const targetWater = 3000;
+    let currentCalories = 1420;
+    const targetCalories = 1850;
+
+    function toggleGlass(btn) {
+      if (btn.classList.contains('bg-secondary')) {
+        btn.classList.remove('bg-secondary', 'text-on-secondary');
+        btn.classList.add('bg-surface-container', 'text-outline');
+        currentWater = Math.max(0, currentWater - 250);
+      } else {
+        btn.classList.remove('bg-surface-container', 'text-outline');
+        btn.classList.add('bg-secondary', 'text-on-secondary');
+        currentWater = Math.min(3500, currentWater + 250);
+      }
+      document.getElementById('water-intake-readout').textContent = currentWater.toLocaleString();
+    }
+
+    function logWaterQuick() {
+      currentWater = Math.min(3500, currentWater + 250);
+      document.getElementById('water-intake-readout').textContent = currentWater.toLocaleString();
+      
+      // Auto highlight next glass
+      const grid = document.getElementById('glasses-grid');
+      const unselected = grid.querySelector('.bg-surface-container');
+      if (unselected) {
+        unselected.classList.remove('bg-surface-container', 'text-outline');
+        unselected.classList.add('bg-secondary', 'text-on-secondary');
+      }
+    }
+
+    function confirmMeal(mealName) {
+      alert(mealName + ' successfully confirmed and marked as consumed! Macros synced to clinical chart.');
+    }
+
+    function quickSelectFood(name) {
+      document.getElementById('food-search-input').value = name;
+      filterIndianFoods(name);
+    }
+
+    function filterIndianFoods(query) {
+      const q = query.toLowerCase().trim();
+      const items = document.querySelectorAll('#food-results-list > div');
+      items.forEach(el => {
+        const text = el.textContent.toLowerCase();
+        if (text.includes(q)) {
+          el.style.display = 'flex';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+
+    function addFoodItem(itemName, kcal, protein) {
+      currentCalories += kcal;
+      const consumedValEl = document.getElementById('cal-consumed-val');
+      if (consumedValEl) {
+        consumedValEl.textContent = currentCalories.toLocaleString();
+      }
+
+      // Update Calorie Ring offset
+      const ring = document.getElementById('calorie-ring-circle');
+      if (ring) {
+        const ratio = Math.min(1, currentCalories / targetCalories);
+        const circumference = 427.25;
+        const newOffset = circumference * (1 - ratio);
+        ring.style.strokeDashoffset = newOffset;
+      }
+
+      document.getElementById('food-search-modal').classList.add('hidden');
+      alert('Logged ' + itemName + ' (+' + kcal + ' kcal, +' + protein + 'g Protein) to your daily journal.');
+    }
+  </script>
+</div></main></div></body></html>

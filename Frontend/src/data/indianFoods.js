@@ -1,0 +1,124 @@
+export const indianFoods = [
+  {
+    name: "Phulka / Roti (Wheat)",
+    tag: "ROT",
+    portion: "1 piece (35g)",
+    kcal: 80,
+    protein: 3,
+    carbs: 16,
+    fats: 0.5,
+    tagBg: "bg-surface-container-highest",
+    tagText: "text-primary"
+  },
+  {
+    name: "Yellow Dal Tadka",
+    tag: "DAL",
+    portion: "1 katori (150g)",
+    kcal: 150,
+    protein: 9,
+    carbs: 21,
+    fats: 3.5,
+    tagBg: "bg-tertiary-fixed",
+    tagText: "text-tertiary"
+  },
+  {
+    name: "Paneer Bhurji (Low-fat)",
+    tag: "PAN",
+    portion: "100g serving",
+    kcal: 180,
+    protein: 18,
+    carbs: 4,
+    fats: 10,
+    tagBg: "bg-secondary-fixed",
+    tagText: "text-secondary"
+  },
+  {
+    name: "Homemade Cow Milk Curd (Dahi)",
+    tag: "DAH",
+    portion: "1 bowl (100g)",
+    kcal: 60,
+    protein: 4,
+    carbs: 5,
+    fats: 2.8,
+    tagBg: "bg-surface-container-high",
+    tagText: "text-primary"
+  },
+  {
+    name: "Roti (Whole Wheat)",
+    tag: "ROT",
+    portion: "1 medium (40g)",
+    kcal: 90,
+    protein: 3.5,
+    carbs: 18,
+    fats: 0.8,
+    tagBg: "bg-surface-container-highest",
+    tagText: "text-primary"
+  },
+  {
+    name: "Dal Tadka (Moong)",
+    tag: "DAL",
+    portion: "1 bowl (150g)",
+    kcal: 140,
+    protein: 8.5,
+    carbs: 20,
+    fats: 3,
+    tagBg: "bg-tertiary-fixed",
+    tagText: "text-tertiary"
+  },
+  {
+    name: "Brown Rice (Steamed)",
+    tag: "RIC",
+    portion: "1 cup (150g cooked)",
+    kcal: 170,
+    protein: 3.8,
+    carbs: 36,
+    fats: 1.2,
+    tagBg: "bg-surface-container-high",
+    tagText: "text-primary"
+  },
+  {
+    name: "Moong Sprouts Chaat",
+    tag: "SPR",
+    portion: "1 bowl (120g)",
+    kcal: 130,
+    protein: 9.2,
+    carbs: 22,
+    fats: 1,
+    tagBg: "bg-secondary-container",
+    tagText: "text-on-secondary-container"
+  },
+  {
+    name: "Besan Chilla with Mint Chutney",
+    tag: "CHL",
+    portion: "1 piece (60g)",
+    kcal: 110,
+    protein: 5.5,
+    carbs: 14,
+    fats: 3.5,
+    tagBg: "bg-secondary-fixed",
+    tagText: "text-secondary"
+  },
+  {
+    name: "Palak Paneer",
+    tag: "PLK",
+    portion: "150g bowl",
+    kcal: 190,
+    protein: 16,
+    carbs: 7,
+    fats: 11,
+    tagBg: "bg-secondary-container",
+    tagText: "text-on-secondary-container"
+  },
+  {
+    name: "Roasted Makhana (Foxnuts)",
+    tag: "MKH",
+    portion: "1 bowl (30g)",
+    kcal: 115,
+    protein: 3.8,
+    carbs: 21,
+    fats: 1.8,
+    tagBg: "bg-surface-container-low",
+    tagText: "text-primary"
+  }
+];
+

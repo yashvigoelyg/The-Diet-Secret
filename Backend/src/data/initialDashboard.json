@@ -1,0 +1,116 @@
+{
+  "user": {
+    "name": "Priyanshu",
+    "role": "Patient",
+    "patientId": "TDS-8924",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCfD_M4cBF-72fHDnElyhWTQZ4HjcgRgKJjEhbBhfdMsMk3UQhzdaMYozGZd9ck5N7IfEThXdJntur_9eI7gFotUztYaUDOT9z5DAdCVyOWnU0NeoABL2pjbvzerGqIrTv2b468jOGA0vcTlqGeQvnKqbv5K68VAjqCNPlRahM5evRIz8NzzodnkMNJwhtk50alD_C40rspbD32RBQl85tPtveGX3-Mr8OW150q8g",
+    "planName": "Metabolic Shield",
+    "currentMilestone": "Day 24 of 84",
+    "activeProtocol": "PCOS & Metabolic Reset (12 Weeks)",
+    "protocolPhase": "Week 4 of 12 (33%)",
+    "glycemicStabilityIncrease": "+14%",
+    "nextLipidCheckDays": 14
+  },
+  "upcomingSession": {
+    "dietitian": "Dr. Anjali Sharma, RD",
+    "title": "Metabolic Biometrics Review & Week 4 Tweaks",
+    "timeText": "Tomorrow • 11:30 AM IST",
+    "videoLink": "https://meet.google.com"
+  },
+  "nutrition": {
+    "targetCalories": 1850,
+    "consumedCalories": 1420,
+    "macros": {
+      "protein": { "current": 84, "target": 110, "unit": "g", "percentage": 76, "note": "Optimal window for PCOS recovery", "action": "26g needed at Dinner" },
+      "carbs": { "current": 145, "target": 200, "unit": "g", "percentage": 72, "note": "Slow glycemic release sustained", "action": "55g remaining" },
+      "fats": { "current": 38, "target": 50, "unit": "g", "percentage": 76, "note": "Hormonal support active", "action": "12g remaining" },
+      "fibre": { "current": 28, "target": 32, "unit": "g", "percentage": 87, "note": "94% daily microbiome benchmark", "action": "4g to optimal goal" }
+    }
+  },
+  "hydration": {
+    "targetMl": 3000,
+    "currentMl": 2250,
+    "loggedGlasses": [true, true, true, true, true, true, true, true, true, false, false, false]
+  },
+  "vitals": {
+    "sleep": { "duration": "7h 20m", "status": "Deep / Restorative" },
+    "steps": { "current": 8420, "target": 10000, "percentage": 84.2 },
+    "weightTrajectory": {
+      "initial": 79.4,
+      "current": 75.2,
+      "unit": "kg",
+      "change": -4.2,
+      "bmi": 24.1,
+      "bmiStatus": "Normalized"
+    }
+  },
+  "meals": [
+    {
+      "id": "breakfast",
+      "type": "Breakfast",
+      "time": "08:45 AM",
+      "window": "08:00 - 09:30 AM",
+      "status": "Logged",
+      "calories": 320,
+      "protein": 18,
+      "carbs": 34,
+      "items": [
+        { "name": "2 Besan Chillas", "description": "With fresh mint-coriander chutney", "calories": 220, "protein": 11 },
+        { "name": "1 Whole Boiled Egg", "description": "Sprinkled with rock salt & black pepper", "calories": 78, "protein": 6.5 },
+        { "name": "Masala Green Tea", "description": "Cardamom, ginger infusion (No sugar)", "calories": 22, "protein": 0.5 }
+      ]
+    },
+    {
+      "id": "lunch",
+      "type": "Lunch",
+      "time": "01:20 PM",
+      "window": "01:00 - 02:00 PM",
+      "status": "Logged",
+      "calories": 540,
+      "protein": 34,
+      "carbs": 58,
+      "items": [
+        { "name": "2 Multigrain Phulkas", "description": "Wheat + Jowar + Ragi", "calories": 160, "protein": 6 },
+        { "name": "Palak Paneer (150g)", "description": "Cow milk paneer in spinach", "calories": 190, "protein": 16 },
+        { "name": "1 Cup Dal Tadka", "description": "Yellow Moong & Toor", "calories": 150, "protein": 10 },
+        { "name": "Cucumber Salad", "description": "Lemon dressing & flax seeds", "calories": 40, "protein": 2 }
+      ]
+    },
+    {
+      "id": "evening-snack",
+      "type": "Evening Snack",
+      "time": "05:00 PM",
+      "window": "Pre-workout Sustenance",
+      "status": "Logged",
+      "calories": 160,
+      "protein": 6,
+      "carbs": 18,
+      "items": [
+        { "name": "Roasted Makhana (Foxnuts)", "description": "Dry roasted with 2 halves walnuts & pink salt", "calories": 145, "protein": 5.5 },
+        { "name": "Assam Black Tea", "description": "Brewed with ginger & cardamom (Sugar-free)", "calories": 15, "protein": 0.5 }
+      ]
+    },
+    {
+      "id": "dinner",
+      "type": "Dinner",
+      "time": "08:15 PM",
+      "window": "Recommended: Minimum 2.5 hours prior to sleep",
+      "status": "Planned",
+      "calories": 400,
+      "protein": 26,
+      "carbs": 35,
+      "items": [
+        { "name": "Prescribed: Oats Khichdi with Steamed Veggies & Low-Fat Curd", "description": "Rolled oats, yellow moong, carrots, beans, 100g probiotic curd", "calories": 400, "protein": 26 }
+      ]
+    }
+  ],
+  "dietitianNotes": {
+    "doctorName": "Dr. Anjali Sharma",
+    "doctorTitle": "Chief Dietitian",
+    "loggedAt": "Today 09:15 AM",
+    "title": "Remarkable adherence on protein goals!",
+    "body": "Priyanshu, your post-lunch glucose stabilization has visibly flattened on the logs. Great job maintaining protein through paneer and dal combination! On your morning strength days (Tuesday/Thursday), please bump water intake by an additional 500ml before 2 PM to optimize renal filtration.",
+    "nextCheckpoint": "Tomorrow, 11:30 AM IST"
+  }
+}
+
